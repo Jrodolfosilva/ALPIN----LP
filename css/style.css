@@ -12,17 +12,20 @@ html{
     font-size: 62.5%;
     font-family: "Source Sans Pro",Sans-serif;
 }
-body{
-    
+
+h2{
+    text-transform: uppercase;
 }
 
 #garantia{
-    margin: 3rem 5rem;
+    margin: 3rem 10rem;
     padding: 1rem;
-    margin-bottom: 90px;
     border: 1rem solid var(--color-bd-blue);
     border-radius: 5rem;
     background-color: var(--color-bg);
+    width: 69%;
+    margin: 3rem auto;
+    margin-bottom: 90px;
 
 }
 
@@ -67,7 +70,7 @@ body{
 
 
 
-#bonus{
+#bonus,#duvidas{
     background-image: url("../image/bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -96,6 +99,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap:3rem;
     margin-top: 3rem;
 }
@@ -106,11 +110,14 @@ body{
     border-radius: 1rem;
     text-align: center;
     color: #fff;
+    max-width: 50rem;
+    min-height: 63rem;
 }
 
 
 .bonus-card> img{
-   border-radius: 1rem; 
+   border-radius: 1rem;
+    
 }
 
 
@@ -134,7 +141,7 @@ body{
     line-height: 3rem;
 }
 
-#bonus > button{
+ button{
     background-color: #00b092;
     padding: 2rem 4rem;
     border: none;
@@ -165,3 +172,122 @@ body{
     font-weight: 800;
     color: #2d2b2b;
 }
+
+
+.depoimentos{
+    padding: 9rem;
+    max-width: 110rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.depoimentos > h2{
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.5rem;
+}
+
+.depoimentos > h4{
+    margin: 2rem 0rem;
+    font-size: 2.5rem;
+}
+
+
+.depoimentos-comentarios{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+   
+}
+
+
+.comentario{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    padding: 6rem 0rem;
+    
+}
+
+.comentario:not(:last-of-type){
+    border-bottom: 0.1rem solid #e1e1e1;
+
+}
+
+.comentario > img{
+    width: 8rem;
+    border-radius: 50%;
+    border: 0.4rem solid rgb(11, 11, 151);
+}
+
+.comentario > div> h4{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.comentario> div> p , .comentario > div> span{
+    font-size: 2.5rem;
+    margin:2rem  0rem;
+}
+
+
+
+#duvidas{
+    display: flex;
+    flex-flow: column ;
+   padding: 9rem 2rem;
+   align-items: center;
+    
+}
+
+
+#duvidas > h2{
+
+    font-size: 4rem;
+    color: #fff;
+}
+
+
+.conteudo-duvidas{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100%;
+   
+}
+
+.faq{
+    background-color: red;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.quest{
+    background-color: #ffffff;
+    padding: 1.3rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    
+    
+    
+}
+
+
+
+
+
+
+.resp{
+    font-size: 2rem;
+    line-height: 3rem;
+    margin: 2rem 0rem;
+    color: #fff;
+    text-align: justify;
+   
+    
+
+}
+

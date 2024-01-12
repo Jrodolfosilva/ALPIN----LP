@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALPIN - VSL2</title>
+    <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/swiper.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -28,7 +30,7 @@
         <div class="bonus-cards">
             <div class="bonus-card">
                 <img src="./image/card1.webp" alt="">
-                <h5>BÔNUS #2 <span>Renove Você</span> <span>GRÁTIS!</span></h5>
+                <h5>BÔNUS #2 <span>Renove Você</span><br/> <span>GRÁTIS!</span></h5>
                 <p>Com o seu novo corpo acelerado, surge uma nova mentalidade. Descubra métodos simples que você pode fazer agora mesmo para aliviar instantaneamente o estresse e acalmar sua mente, aumentar a confiança e reduzir a ansiedade.</p>
             </div>
             <div class="bonus-card">
@@ -44,7 +46,106 @@
         <h3>FRETE GRÁTIS E ENVIO IMEDIATO!</h3>
     </div>
 
+    <section class="depoimentos">
+        <h2>Usuários reais<br/>
+            do Alpin</h2>
+            <h4>Resultados que transformam vidas.</h4>
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./image/foto1-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/foto5-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/foto3-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/foto2-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/foto4-2-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/foto6-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/foto7-300x300.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/larissa-1-300x300.webp" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="./image/AnyConv.com__ana1-300x300.webp" alt="">
+              </div>
+              
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+          <div class="depoimentos-comentarios">
+              <div class="comentario">
+                <img src="./image/joana souza.webp" alt="">
+                <div>
+                  <h4>Joana está 15 quilos mais leve até agora...</h4>
+                  <img src="./image/avaliacao.webp" alt="">
+                  <p>Minha filha costumava ficar com vergonha de eu buscá-la na escola. Com medo das outras crianças chamarem sua mãe de gorda. Mas agora, depois de perder 15 quilos com Alpin, estou incrível e me sinto incrível. Eu caibo no meu jeans de 10 anos atrás! É incrível. E melhor ainda, minha filha tem orgulho de me chamar de mãe. Eu não poderia estar mais feliz, obrigado!</p>
+                  <span><b>Joana Souza</b> - MG</span>
+                </div>
+              </div>
+              <div class="comentario">
+                <img src="./image/joana souza.webp" alt="">
+                <div>
+                  <h4>Joana está 15 quilos mais leve até agora...</h4>
+                  <img src="./image/avaliacao.webp" alt="">
+                  <p>Minha filha costumava ficar com vergonha de eu buscá-la na escola. Com medo das outras crianças chamarem sua mãe de gorda. Mas agora, depois de perder 15 quilos com Alpin, estou incrível e me sinto incrível. Eu caibo no meu jeans de 10 anos atrás! É incrível. E melhor ainda, minha filha tem orgulho de me chamar de mãe. Eu não poderia estar mais feliz, obrigado!</p>
+                  <span><b>Joana Souza</b> - MG</span>
+                </div>
+              </div>
+              <div class="comentario">
+                <img src="./image/joana souza.webp" alt="">
+                <div>
+                  <h4>Joana está 15 quilos mais leve até agora...</h4>
+                  <img src="./image/avaliacao.webp" alt="">
+                  <p>Minha filha costumava ficar com vergonha de eu buscá-la na escola. Com medo das outras crianças chamarem sua mãe de gorda. Mas agora, depois de perder 15 quilos com Alpin, estou incrível e me sinto incrível. Eu caibo no meu jeans de 10 anos atrás! É incrível. E melhor ainda, minha filha tem orgulho de me chamar de mãe. Eu não poderia estar mais feliz, obrigado!</p>
+                  <span><b>Joana Souza</b> - MG</span>
+                </div>
+              </div>
+              
+          </div>
+          <button>Quero Emagrecer Agora</button>
+
+    </section>
+
+    <section id="duvidas">
+      <h2>Ainda com dúvidas</h2>
+      
+    </section>
  </main>
+ <script>
+  function toggleFAQ(faqNumber) {
+      var faqAnswer = document.getElementById('faq' + faqNumber);
+      var allAnswers = document.querySelectorAll('.faq-answer');
+      allAnswers.forEach(function(answer) {
+          if (answer !== faqAnswer) {
+              answer.style.display = 'none';
+          }
+      });
+      if (faqAnswer.style.display === 'block') {
+          faqAnswer.style.display = 'none';
+      } else {
+          faqAnswer.style.display = 'block';
+      }
+  }
+</script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
  <script src="./script/script.js"></script>
 </body>
 </html>
