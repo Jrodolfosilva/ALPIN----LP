@@ -5,8 +5,530 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ALPIN - VSL2</title>
     <link  rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="./css/swiper.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <style>
+              .swiper-slide{
+        height: 30rem;
+        margin-top: 3rem;
+
+        }
+
+        .swiper-slide > img{
+            max-width: 240px;
+            max-height: 240px;
+            border: 0.3rem solid var(--color-bd-yellow);
+            border-radius: 1rem;
+        }
+    </style>
+    <style>
+      *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: 0px;
+
+    --color-bg:#e5fffb;
+    --color-bd-yellow:#fcb900;
+    --color-bd-blue: #020381
+    
+}
+html{
+    font-size: 62.5%;
+    font-family: "Source Sans Pro",Sans-serif;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+ul{
+    list-style: none;
+}
+#garantia{
+    margin: 3rem 10rem;
+    padding: 1rem;
+    border: 1rem solid var(--color-bd-blue);
+    border-radius: 5rem;
+    background-color: var(--color-bg);
+    width: 69%;
+    margin: 3rem auto;
+    margin-bottom: 90px;
+
+}
+
+.bd-yellow{
+    padding: 2rem;
+    border: 0.8rem solid var(--color-bd-yellow);
+    border-radius: 4rem;
+    border-style: dashed;
+}
+
+.bd-yellow >h4{
+    background-color: var(--color-bd-blue);
+    margin-top: 3rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+.conteudo-garantia{
+    text-align: center;
+    margin-top: -10rem;
+    
+}
+
+.conteudo-garantia >h2, .conteudo-garantia > img{
+    display: inline;  
+}
+
+.conteudo-garantia > h2{
+    color: var(--color-bd-blue);
+    font-size: 10rem;
+    font-weight: 800;
+    line-height:10rem;
+    text-transform: uppercase;
+}
+
+
+
+
+#bonus,#duvidas{
+    background-image:url("https://alpin.net.br/wp-content/uploads/2023/05/mountain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 9rem ;
+}
+
+.bonus-conteudo{
+    text-align: center;
+    color: #fff;
+}
+
+.bonus-conteudo > h4{
+    font-size: 5rem;
+}
+
+.bonus-conteudo > h4 > span{
+    color: var(--color-bd-yellow);
+}
+
+.bonus-conteudo > p{
+    font-size: 3.5rem;
+}
+
+.bonus-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:3rem;
+    margin-top: 3rem;
+}
+
+.bonus-card{
+    background-color:#007796ed;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: #fff;
+    max-width: 50rem;
+    min-height: 63rem;
+}
+
+
+.bonus-card> img{
+   border-radius: 1rem;
+    
+}
+
+
+.bonus-card > h5{
+    font-size: 2.8rem;
+    margin: 1rem 0rem;
+    color: #00ffff;
+}
+
+.bonus-card > h5 > span:first-child{
+    color: #fff;
+}
+
+.bonus-card > h5 > span:last-child{
+    color: var(--color-bd-yellow);
+}
+
+
+.bonus-card > p{
+    font-size: 1.8rem;
+    line-height: 3rem;
+}
+
+ .button{
+    max-width: 30rem;
+    text-decoration: none;
+    display: block;
+    background-color: #00b092;
+    padding: 2rem 4rem;
+    border: none;
+    border-radius: 1rem;
+    display: block;
+    margin: 03rem auto;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.button:hover{
+    background-color: #007796;
+}
+.whats{
+    background-color: #00b01b;
+}
+
+.bonus-frete{
+    background-color: #007796;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.bonus-frete > img{
+    width: 10rem;
+}
+
+.bonus-frete > h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+
+.depoimentos{
+    padding: 9rem;
+    max-width: 110rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.depoimentos > h2{
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.5rem;
+}
+
+.depoimentos > h4{
+    margin: 2rem 0rem;
+    font-size: 2.5rem;
+}
+
+
+.depoimentos-comentarios{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+   
+}
+
+
+.comentario{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 3rem;
+    padding: 6rem 0rem;
+    
+}
+
+.comentario:not(:last-of-type){
+    border-bottom: 0.1rem solid #e1e1e1;
+
+}
+
+.comentario > img{
+    width: 8rem;
+    border-radius: 50%;
+    border: 0.4rem solid rgb(11, 11, 151);
+}
+
+.comentario > div> h4{
+    font-size: 3rem;
+    font-weight: 600;
+}
+.comentario> div> p , .comentario > div> span{
+    font-size: 2.5rem;
+    margin:2rem  0rem;
+}
+
+
+
+#duvidas{
+    display: flex;
+    flex-flow: column ;
+   padding: 9rem 2rem;
+   align-items: center;
+    
+}
+
+
+#duvidas > h2{
+
+    font-size: 4rem;
+    color: #fff;
+}
+
+
+article{
+
+    display: flex;
+    justify-content: center;
+    align-content: baseline;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+
+
+.faq-item{
+    width: 45rem;
+    
+
+}
+.faq-title{
+    background-color: #fff;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-bd-blue);
+    cursor: pointer;
+}
+
+.faq-answer{
+    word-break: break-all;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 1rem 0rem;
+    line-height: 3rem;
+    text-align: justify;
+    display: none;
+}
+
+
+@media (max-width:1200px) {
+    #garantia{
+        width: 90%;
+    }
+    .conteudo-garantia > h2{
+        font-size: 6rem;
+        line-height: 5rem;
+        
+    }
+    .conteudo-garantia > img{
+        width: 200px;
+    }
+    
+
+    .bonus-frete{
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 3rem 1.2rem;
+    }
+   
+    
+}
+
+@media (max-width:768px) {
+    #garantia{
+        width: auto;
+    }
+    .conteudo-garantia > h2{
+        font-size: 4rem;
+        
+        
+    }
+    .conteudo-garantia > img{
+        width: 150px;
+    }
+    
+
+    #bonus, #duvidas, .depoimentos{
+        padding:9rem 1.2rem;
+    }
+
+    .bonus-conteudo>h4{
+        font-size: 3rem;
+    }
+    .bonus-conteudo>p{
+        font-size: 1.8rem;
+    }
+
+    .bonus-card{
+        min-height: auto;
+    }
+    .bonus-card >img{
+        width: 60%;
+    }
+    .bonus-card > h5{
+        font-size: 2rem;
+    }
+
+   
+    .bonus-frete > h3 {
+        font-size: 1.8rem;
+    }
+    
+    .depoimentos > h2 {
+        font-size: 2.8rem;
+        line-height: 3rem;
+    }
+
+    .depoimentos > h4 {
+        margin: 2rem 0rem;
+        font-size: 1.8rem;
+    }
+
+
+    .comentario {
+  
+    flex-wrap: wrap;
+   
+}
+
+    .comentario > div> h4 {
+        font-size: 2.2rem;
+       
+    }
+    .comentario > div> img {
+        width: 30rem;
+       
+    }
+    .comentario> div> p{
+        font-size: 1.8rem;
+    }
+    .comentario > div> span {
+        font-size: 1.8rem;
+        
+    }
+
+    #duvidas > h2 {
+        font-size: 3rem;
+        
+    }
+
+    .faq-item {
+        width: 40rem;
+    }
+
+
+}
+
+@media (max-width:425px) {
+
+    .conteudo-garantia > h2{
+        font-size: 3rem;
+    }
+    .conteudo-garantia > img{
+        width: 150px;
+    }
+    .bd-yellow > h4{
+        font-size: 1.8rem;
+    }
+
+    .bonus-frete{
+        gap: 0px;
+    }
+
+   .comentario > div> img {
+    width: 20rem;
+
+}
+
+.faq-item {
+    width: 30rem;
+}
+
+
+
+
+
+
+
+
+}
+
+@media (max-width:375px) {
+
+    .conteudo-garantia{
+        margin: 0;
+    }
+    .conteudo-garantia > h2{
+        line-height: 4rem;
+        
+        
+    }
+    .conteudo-garantia > img{
+        width: 100px;
+    }
+    
+    .depoimentos > h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+
+    #duvidas > h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    
+}
+
+
+@media (max-width:330px) {
+
+
+    
+    .conteudo-garantia > h2{
+        font-size: 2rem;
+        line-height: 2rem; 
+        
+    }
+   
+    .faq-item {
+        width: 25rem;
+    }
+   
+    
+
+    
+}
+
+.faq-title{
+    position: relative;
+}
+
+.faq-title::after{
+    position: absolute;
+    content: "";
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #0a1395;
+    left: 100%;
+    margin-left: -20px;
+    top: 40%;
+}
+    </style>
 </head>
 <body>
  <main>
@@ -14,7 +536,7 @@
             <div class="bd-yellow">
                 <div class="conteudo-garantia">
                     <h2>60</h2>
-                    <img src="./image/certificado.webp" alt="">
+                    <img src="https://alpin.net.br/wp-content/uploads/2024/01/guaranteeSeal.webp" width="300" alt="">
                     <h2>Dias <br/> de Garantia</h2>
                 </div>
                 <h4>60 DIAS de Garantia, reembolso do dinheiro - Basta nos enviar os potes, mesmo que estejam vazios e obtenha um reembolso total, sem perguntas.</h4>
@@ -29,20 +551,20 @@
         </div>
         <div class="bonus-cards">
             <div class="bonus-card">
-                <img src="./image/card1.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/ebook1.webp"width="400" alt="">
                 <h5>BÔNUS #2 <span>Renove Você</span><br/> <span>GRÁTIS!</span></h5>
                 <p>Com o seu novo corpo acelerado, surge uma nova mentalidade. Descubra métodos simples que você pode fazer agora mesmo para aliviar instantaneamente o estresse e acalmar sua mente, aumentar a confiança e reduzir a ansiedade.</p>
             </div>
             <div class="bonus-card">
-                <img src="./image/card2.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/ebook2.webp" width="400" alt="">
                 <h5>BÔNUS #1 <span>Desintoxicação Inicial De 1 Dia</span> <span>GRÁTIS!</span></h5>
                 <p>Desintoxique, limpe e enxágue seus órgãos para ajudar na absorção e dê o pontapé inicial em sua jornada alpina com 20 receitas bizarras de chá de desintoxicação de 15 segundos, usando ingredientes do dia a dia da sua cozinha.</p> 
             </div>
         </div>
-        <button>Quero Emagrecer Agora</button>
+        <a class="button" href="https://api.whatsapp.com/send?phone=5511951043282&text=Ol%C3%A1,%20assisti%20%C3%A0%20apresenta%C3%A7%C3%A3o%20do%20Alpin%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre">Quero Emagrecer Agora</a>
     </section>
     <div class="bonus-frete">
-        <img src="./image/frete-300x300.webp" alt="">
+        <img src="https://alpin.net.br/wp-content/uploads/2023/05/frete-300x300.webp" alt="">
         <h3>FRETE GRÁTIS E ENVIO IMEDIATO!</h3>
     </div>
 
@@ -52,34 +574,34 @@
             <h4>Resultados que transformam vidas.</h4>
         <div class="swiper">
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper" data-swiper-autoplay="2000">
               <!-- Slides -->
               <div class="swiper-slide">
-                <img src="./image/foto1-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/foto3-300x300.png" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/foto5-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/foto6-2-300x300.png" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/foto3-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/AnyConv.com__brenda2-300x300.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/foto2-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/marquinhos-300x300-1.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/foto4-2-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/AnyConv.com__ana2-300x300.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/foto6-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/foto1-300x300.png" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/foto7-300x300.png" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/foto4-2-300x300.png" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/larissa-1-300x300.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/larissa-1-300x300.webp" alt="">
               </div>
               <div class="swiper-slide">
-                <img src="./image/AnyConv.com__ana1-300x300.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/foto5-300x300.png" alt="">
               </div>
               
             </div>
@@ -92,60 +614,194 @@
           </div>
           <div class="depoimentos-comentarios">
               <div class="comentario">
-                <img src="./image/joana souza.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/download-15_11zon-150x150.webp" alt="">
                 <div>
                   <h4>Joana está 15 quilos mais leve até agora...</h4>
-                  <img src="./image/avaliacao.webp" alt="">
+                  <img src="https://alpin.net.br/wp-content/uploads/2024/01/star-x-1-1024x61.webp"width="300" alt="">
                   <p>Minha filha costumava ficar com vergonha de eu buscá-la na escola. Com medo das outras crianças chamarem sua mãe de gorda. Mas agora, depois de perder 15 quilos com Alpin, estou incrível e me sinto incrível. Eu caibo no meu jeans de 10 anos atrás! É incrível. E melhor ainda, minha filha tem orgulho de me chamar de mãe. Eu não poderia estar mais feliz, obrigado!</p>
                   <span><b>Joana Souza</b> - MG</span>
                 </div>
               </div>
               <div class="comentario">
-                <img src="./image/joana souza.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2024/01/download-9_11zon-150x150.webp" alt="">
                 <div>
-                  <h4>Joana está 15 quilos mais leve até agora...</h4>
-                  <img src="./image/avaliacao.webp" alt="">
-                  <p>Minha filha costumava ficar com vergonha de eu buscá-la na escola. Com medo das outras crianças chamarem sua mãe de gorda. Mas agora, depois de perder 15 quilos com Alpin, estou incrível e me sinto incrível. Eu caibo no meu jeans de 10 anos atrás! É incrível. E melhor ainda, minha filha tem orgulho de me chamar de mãe. Eu não poderia estar mais feliz, obrigado!</p>
-                  <span><b>Joana Souza</b> - MG</span>
+                  <h4>Francisco perdeu 18 quilos...</h4>
+                  <img src="https://alpin.net.br/wp-content/uploads/2024/01/star-x-1-1024x61.webp"width="300" alt="">
+                  <p>Eu tinha tentado de tudo, literalmente todas as dietas e planos de perda de peso que existiam e mal perdi meio quilo. Mas então eu vi o vídeo do Alpin e tudo deu certo. Agora perdi 18 quilos. Estou comendo normalmente, mas perdendo mais peso do que quando estava morrendo de fome! Respiro mais facilmente e meu ronco parou, então minha esposa está mais feliz! Sinto-me um milhão de vezes mais como o pai e marido que deveria ser.  </p>
+                  <span><b>Francisco Santos. </b> -BH</span>
                 </div>
               </div>
               <div class="comentario">
-                <img src="./image/joana souza.webp" alt="">
+                <img src="https://alpin.net.br/wp-content/uploads/2023/05/depoimento2-150x150.png" alt="">
                 <div>
-                  <h4>Joana está 15 quilos mais leve até agora...</h4>
-                  <img src="./image/avaliacao.webp" alt="">
-                  <p>Minha filha costumava ficar com vergonha de eu buscá-la na escola. Com medo das outras crianças chamarem sua mãe de gorda. Mas agora, depois de perder 15 quilos com Alpin, estou incrível e me sinto incrível. Eu caibo no meu jeans de 10 anos atrás! É incrível. E melhor ainda, minha filha tem orgulho de me chamar de mãe. Eu não poderia estar mais feliz, obrigado!</p>
-                  <span><b>Joana Souza</b> - MG</span>
+                  <h4>Isabel derreteu 12 quilos em pouco tempo...</h4>
+                  <img src="https://alpin.net.br/wp-content/uploads/2024/01/star-x-1-1024x61.webp"width="300" alt="">
+                  <p>Desde que tomei Alpin todos os dias, meus braços e barriga flácidos se dissolveram em nada. Honestamente, é como um truque de mágica porque parece tão irreal que algo tão simples funcione tão bem. Estou com 3 tamanhos de vestido abaixo. Estou tão, tão orgulhosa do meu novo corpo sexy. Muito obrigado!</p>
+                  <span><b>Isabel Pereira.</b> - SP</span>
                 </div>
               </div>
               
           </div>
-          <button>Quero Emagrecer Agora</button>
+          <a class="button" href="https://api.whatsapp.com/send?phone=5511951043282&text=Ol%C3%A1,%20assisti%20%C3%A0%20apresenta%C3%A7%C3%A3o%20do%20Alpin%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre" >Quero Emagrecer Agora</a>
 
     </section>
 
     <section id="duvidas">
       <h2>Ainda com dúvidas</h2>
-      
+
+      <article>
+        <section>
+          <div class="faq-item" onclick="toggleFAQ(7)">
+              <div class="faq-title">O ALPIN É INDICADO PRA MIM?</div>
+              <div class="faq-answer" id="faq7">
+                Você tem gordura teimosa que nenhuma dieta ou exercício parece remover? Se a resposta é SIM, Alpin é certo para você. Alpin mudou a vida de milhares de mulheres e homens de 18 a 80 anos e é projetado para dissolver rapidamente a gordura mesmo nos piores casos.
+              </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(8)">
+            <div class="faq-title">ALPIN É SEGURO?</div>
+            <div class="faq-answer" id="faq8">
+              Alpin tem uma fórmula 100% natural aprovado pela ANVISA, usando máquinas de engenharia de precisão de última geração e sob os padrões mais rígidos. Cada ingrediente é 100% natural, sem soja, sem laticínios, não transgênico e submetido a inspeções adicionais de terceiros e controle de qualidade para garantir alta pureza e potência. 
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFAQ(9)">
+          <div class="faq-title">EM QUANTO TEMPO EU TEREI RESULTADOS?</div>
+          <div class="faq-answer" id="faq9">
+            Ao fim do primeiro mês, você já poderá notar pelo menos 3Kg a 7kg eliminados! Com benefícios para o seu corpo, saúde, energia e disposição. Resultados podem variar de acordo com o organismo de cada pessoa.
+          </div>
+      </div>
+    <div class="faq-item" onclick="toggleFAQ(11)">
+      <div class="faq-title">QUANTOS POTES DEVO PEDIR?</div>
+      <div class="faq-answer" id="faq11">
+        Se você tem mais de 35 anos ou tem excesso de peso, recomendamos que tome Alpin por pelo menos 5 a 12 meses, para que tenha tempo suficiente para trabalhar em todo o corpo para atingir a temperatura interna do corpo, atingir o peso desejado e bloquear isso por anos no futuro. Cada pacote de 3 potes de Alpin vem com 2 livros de bônus absolutamente grátis. Ou tome a decisão inteligente e obtenha o pacote de 6 potes com grande desconto, que vem com os 2 livros de bônus absolutamente grátis junto com frete grátis também.
+      </div>
+  </div>
+  <div class="faq-item" onclick="toggleFAQ(12)">
+    <div class="faq-title">COMO FUNCIONA A GARANTIA DE 60 DIAS?</div>
+    <div class="faq-answer" id="faq12">
+      Cada pote de Alpelian vem com nossa garantia pessoal de devolução de 100% do dinheiro em 60 dias. Se, por qualquer motivo, você não estiver satisfeito com seus resultados, basta devolver todos os frascos (mesmo que vazios) para um reembolso total, sem perguntas.
+    </div>
+  </div>
+  <div class="faq-item" onclick="toggleFAQ(13)">
+    <div class="faq-title">FRETE GRÁTIS. DEMORA QUANTO TEMPO?
+    </div>
+    <div class="faq-answer" id="faq13">
+      O frete é 100% grátis e o prazo de entrega varia de 5 a 10 dias.
+    </div>
+  </div>
+        </section>
+
+        <section>
+            <div class="faq-item" onclick="toggleFAQ(1)">
+              <div class="faq-title">ALPIN TEM CONTRA INDICAÇÃO?</div>
+              <div class="faq-answer" id="faq1">
+                Não, o produto é 100% natural, podendo ser usado por todas as pessoas. Mas Gestantes e Lactantes só podem consumir o produto através de prescrição médica. Mulheres amamentando podem consumir o produto após o 6º mês de amamentação.
+              </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(2)">
+              <div class="faq-title">ALPIN TEM REGISTRO NA ANVISA?</div>
+              <div class="faq-answer" id="faq2">
+                  Alpelian é liberado e aprovado pela Anvisa nos termos da RDC 240 de 26/07/2018, sendo dispensado de registro, pois é avaliado como 100% Seguro para o consumo da população.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFAQ(3)">
+              <div class="faq-title">COMO TOMAR O ALPIN</div>
+              <div class="faq-answer" id="faq3">
+                Tome uma cápsula de Alpin duas vezes ao dia, antes das principais refeições com um grande copo de água todos os dias. Sua mistura patenteada sob medida de ingredientes naturais começará a trabalhar dissolvendo a gordura para você, mesmo quando estiver dormindo.
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(20)">
+              <div class="faq-title">COMPRAR PELA INTERNET É SEGURO?</div>
+              <div class="faq-answer" id="faq20">
+                Sim, seu pagamento é totalmente seguro. Usamos os melhores meios de pagamento, seus dados estão 100% seguros. Você tem garantia da entrega do seu produto no prazo correto.
+              </div>
+            </div>
+            <div class="faq-item" onclick="toggleFAQ(21)">
+              <div class="faq-title">O QUE EU FAÇO AGORA?</div>
+              <div class="faq-answer" id="faq21">
+                Esta é a parte divertida. Clique em um dos pacotes abaixo. Insira os detalhes do seu pedido em nossa página segura de checkout. Depois que você terminar, enviaremos seu Alpelian para você imediatamente. 
+              </div>
+            </div>
+       </section>
+         
+          <script>
+              function toggleFAQ(faqNumber) {
+                  var faqAnswer = document.getElementById('faq' + faqNumber);
+                  var allAnswers = document.querySelectorAll('.faq-answer');
+                  allAnswers.forEach(function(answer) {
+                      if (answer !== faqAnswer) {
+                          answer.style.display = 'none';
+                      }
+                  });
+                  if (faqAnswer.style.display === 'block') {
+                      faqAnswer.style.display = 'none';
+                  } else {
+                      faqAnswer.style.display = 'block';
+                  }
+              }
+              
+          </script>
+          
+      </article>
+
+      <a class="button whats" href="https://api.whatsapp.com/send?phone=5511951043282&text=Ol%C3%A1,%20assisti%20%C3%A0%20apresenta%C3%A7%C3%A3o%20do%20Alpin%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre">Quero Emagrecer Agora</a>
+
     </section>
+
+    
  </main>
- <script>
-  function toggleFAQ(faqNumber) {
-      var faqAnswer = document.getElementById('faq' + faqNumber);
-      var allAnswers = document.querySelectorAll('.faq-answer');
-      allAnswers.forEach(function(answer) {
-          if (answer !== faqAnswer) {
-              answer.style.display = 'none';
-          }
-      });
-      if (faqAnswer.style.display === 'block') {
-          faqAnswer.style.display = 'none';
-      } else {
-          faqAnswer.style.display = 'block';
-      }
-  }
-</script>
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- <script src="./script/script.js"></script>
+ <script defer>
+  const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+  
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+      },
+  
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+       
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 1,
+        spaceBetween: 30
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 1,
+        spaceBetween: 40
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1100: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      }
+    }
+  });
+ </script>
 </body>
 </html>
